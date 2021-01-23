@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <script src="https://kit.fontawesome.com/69d4cc193b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="javascript/tinyApi.js"></script>
+    <script src="javascript/isGd.js"></script>
+    <script src="javascript/apiShrtco.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="javascript/loading.js"></script>
+    <title>Whats Chat</title>
+    <style>
+        .menulink1::after {
+            content: "";
+            width: 110px;
+            position: absolute;
+            line-height: 5px;
+            background-color: white;
+            top: 25px;
+            left: -22px;
+            height: 6px;
+        }
+        
+        .linkGrande {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="verdezap">
+        <div class="nav navbar navbar-light d-flex justify-content-around">
+            <a href="#" class="navbar-brand"> <img src="image/icon.png" alt="" class="align-top logo" alt="Logo" loading="lazy"> <span class="text-light titulo">Whats Chat</span> </a>
+        </div>
+        <div class="nav navbar navbar-light d-flex justify-content-around">
+            <div class="container text-light d-flex justify-content-around menu">
+                <span> <a href="index.html" class="mao " id="menuLinkId1">Chat</a></span>
+                <span><a href="#" class="mao menulink1" id="menuLinkId2">Encurtar</a></span>
+                <span><a href="teste.html" class="mao " id="menuLinkId2">Sobre</a></span> </div>
+        </div>
+    </div>
+    <div class="m-3 px-2" id="pagEncurtar">
+
+
+        <!-- Encurtador [0] -->
+        <div class="row justify-content-start align-items-center urlstatus">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-end">
+                <a href="http://tinyurl.com/" target="blank"><img width="80" src="image/tinyurl-plus.png"></a>
+            </div>
+            <div class="col-8 col-sm-8 col-md-8 col-lg-6">
+                <h3>Tiny URL</h3>
+                <p>Expresso</p>
+            </div>
+            <div class="container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <div class="border p-1 my-1 d-flex justify-content-between align-items-center"> <input class="linkGrande d-flex w-95 mr-1 text-center" style="border: none; outline: 0;" placeholder="Encurte seu link" value="" type="text" id="linkCompletoTINYLINK">
+                    <div id="buttonEncurtarTINYLINK" class="btn btn-sm" style="background-color: rgb(0, 185, 206);">
+                        <i class="fas fa-compress-alt" style="color: #fff;"></i>
+                        <spand class="d-none d-sm-inline">Encurtar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom mb-3 container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <div id="divLinkCopiarTINYLINK" style="display: none">
+                    <div class="p-1 my-2 d-flex justify-content-between align-items-center">
+                        <div class="col-10">
+                            <a id="AcessarLinkEncurtado" target="blank" href=""> <input readonly id="linkCurtoTiny" class="text-primary px-1" style="border: none; outline: 0; width: 100%;" value=""> </a>
+                        </div>
+                        <div class="btn btn-light btn-sm border col-auto" id="copiarTINYLINK"> <i class="fas fa-copy"></i>
+                            <spand class="d-none d-sm-inline">Copiar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Encurtador [1] -->
+        <div class="row justify-content-start align-items-center urlstatus">
+            <div class="col-4 col-lg-4 d-flex justify-content-end">
+                <a href="https://is.gd/index.php" target="bl ank"> <img width="80" src="image/isgd-plus.png"> </div>
+            <div class="col-auto">
+                <h3>Is.Gd</h3>
+                <p>Expresso</p>
+                </a>
+            </div>
+            <div class="container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <div class="border p-1 my-1 d-flex justify-content-between align-items-center"> <input class="linkGrande d-flex w-95 mr-1 text-center" style="border: none; outline: 0;" placeholder="Encurte seu link" value="" type="text" id="linkCompleto2">
+                    <div id="buttonEncurtarISGD" class="btn btn-danger btn-sm"> <i class="fas fa-compress-alt" style="color: yellow;"></i>
+                        <spand class="d-none d-sm-inline">Encurtar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom mb-3 container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <div id="divLinkCopiarIsGd" style="display: none">
+                    <div class="p-1 my-2 d-flex justify-content-between align-items-center">
+                        <div class="col-10">
+                            <a id="AcessarLinkEncurtadoISGD" target="blank" href=""> <input readonly id="linkCurtoISGD" class="text-primary d-flex w-100 mr-1" style="border: none; outline: 0; width: 100%;" value="Leandro"> </a>
+                        </div>
+                        <div class="btn btn-light btn-sm border" id="copiarTimiLinkISGD"> <i class="fas fa-copy"></i>
+                            <spand class="d-none d-sm-inline">Copiar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Encurtador [2] -->
+        <div class="row justify-content-start align-items-center urlstatus">
+            <div class="col-4 col-lg-4 d-flex justify-content-end">
+                <a href="https://app.shrtco.de/" target="bl ank"> <img width="80" src="image/app-shrtco.png"> </div>
+            <div class="col-auto">
+                <h3>Shrt Code</h3>
+                <p>Expresso</p>
+                </a>
+            </div>
+            <div class="container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <div class="d-flex justify-content-center align-items-center"> <label class="mx-2 bg-dark px-2 rounded text-light" for="shrtco">shrtco <input type="radio" checked name="1" id="opcao1" value="shrtco.de"></label> <label class="mx-2 bg-dark px-2 rounded text-light" for="9qr">9qr <input type="radio" name="1" id="opcao2" value="9qr.de"></label>                    <label class="mx-2 bg-dark px-2 rounded text-light" for="shiny">shiny <input type="radio" name="1" id="opcao3" value="shiny.link"></label> </div>
+                <div class="border p-1 my-1 d-flex justify-content-between align-items-center"> <input class="linkGrande d-flex w-95 mr-1 text-center" style="border: none; outline: 0;" placeholder="Encurte seu link" value="" type="text" id="linkCompleto3">
+                    <div id="buttonEncurtarShrtCode" class="btn btn-sm" style="background-color: rgb(33, 37, 63);">
+                        <i class="fas fa-compress-alt" style="color: rgb(255, 72, 0);"></i>
+                        <spand class="d-none d-sm-inline text-light">Encurtar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom mb-3 container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <div id="divLinkCopiarShrtCode" style="display: none">
+                    <div class="p-1 my-2 d-flex justify-content-between align-items-center">
+                        <div class="col-10">
+                            <a id="AcessarLinkEncurtadoShrtCode" target="blank" href=""> <input readonly id="linkCurtoShrtCode" class="text-primary d-flex w-100 mr-1" style="border: none; outline: 0; width: 100%;" value=""> </a>
+                        </div>
+                        <div class="btn btn-light btn-sm border" id="copiarTimiLinkShrtCode"> <i class="fas fa-copy"></i>
+                            <spand class="d-none d-sm-inline">Copiar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Encurtador [3] -->
+
+        <div class="row justify-content-start align-items-center urlstatus">
+            <div class="col-4 col-lg-4 d-flex justify-content-end">
+                <a href="https://bitly.com/" target="blank"> <img width="80" src="image/bitly.png" alt=""> </div>
+            <div class="col-auto">
+                <h3>Bitly</h3>
+                <p>Plano Gratuito </p>
+                </a>
+            </div>
+        </div>
+        <!-- Encurtador [4] -->
+        <div class="row justify-content-start align-items-center urlstatus">
+            <div class="col-4 col-lg-4 d-flex justify-content-end">
+                <a href="https://www.encurtador.com.br/" target="blank"><img width="80" src="image/encurtador.png" alt=""> </div>
+            <div class="col-auto">
+                <h3>Encurtador</h3>
+                <p>Plano Gratuito </p>
+                </a>
+            </div>
+        </div>
+        <!-- Encurtador [5] -->
+        <div class="row justify-content-start align-items-center urlstatus">
+            <div class="col-4 col-lg-4 d-flex justify-content-end">
+                <a href="https://short.io/" target="blank"> <img width="80" src="image/short.png" alt=""> </div>
+            <div class="col-auto">
+                <h3>Short.io</h3>
+                <p>Plano Gratuito</p>
+                </a>
+            </div>
+        </div>
+        <!-- Encurtador [6] -->
+        <div class="row justify-content-start align-items-center urlstatus">
+            <div class="col-4 col-lg-4 d-flex justify-content-end">
+                <a href="http://bit.do/" target="blank"><img width="80" src="image/bit-do.png" alt="bit-do"> </div>
+            <div class="col-auto">
+                <h3>Bit.do/</h3>
+                <p>Plano Gratuito</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- DIV Carregando -->
+    <div id="divErro" class="alert alert-danger d-none" style="position: fixed; bottom: 10px; right: 10px;">
+
+    </div>
+    <div id="carregando" style="position: fixed; bottom: 10px; right: 10px;" class="spinner-border text-primary d-none">
+        <div class="sr-only">Carregando...</div>
+    </div>
+</body>
+
+</html>

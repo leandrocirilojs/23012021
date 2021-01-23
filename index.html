@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <script src="https://kit.fontawesome.com/69d4cc193b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="javascript/index.js"></script>
+    <script src="javascript/jquerymain.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="javascript/loading.js"></script>
+    <!-- Api Jquery QRCODE -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/qrcode.js"></script>
+    <title>Whats Chat</title>
+    <style>
+        .menulink1::after {
+            content: "";
+            width: 80px;
+            position: absolute;
+            line-height: 5px;
+            background-color: white;
+            top: 25px;
+            left: -20px;
+            height: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="verdezap">
+        <div class="nav navbar navbar-light d-flex justify-content-around">
+            <a href="#" class="navbar-brand"> <img src="image/icon.png" alt="" class="align-top logo" alt="Logo" loading="lazy"> <span class="text-light titulo">Whats Chat</span> </a>
+        </div>
+        <div class="nav navbar navbar-light d-flex justify-content-around">
+            <div class="container text-light d-flex justify-content-around menu"> <span> <a class="menulink1 mao " id="menuLinkId1">Chat</a></span> <span><a href="encurt.html" class="mao " id="menuLinkId2">Encurtar</a></span> <span><a href="teste.html" class="menulink3 mao " id="menuLinkId2">Sobre</a></span> </div>
+        </div>
+    </div>
+    <div class="container" id="startchat">
+        <div id="receber">
+            <!-- Campo Receber Via Ajax a DIV Number -->
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <i id="abrircampo" class="far fa-keyboard fa-2x vermais"></i>
+        </div>
+        <div class="d-flex justify-content-around align-items-center text-align-center ">
+            <i id="abrircampoEmo" class="abrirEmoticon mx-2 vermais far fa-smile-beam fa-2x" style="color: #808080"></i>
+            <textarea placeholder="Olá! Tudo Bem?" id="menssagem" class="my-1 text-dark mx-2 campomensagem" cols="140" rows="2"></textarea>
+            <a href="" target="blank" id="iniciarconversa" class="">
+                <i id="iconeIniciarCnversar" class="enviar mx-2 vermais fa fa-send fa-2x"></i>
+            </a>
+        </div>
+        <div class="campomensagem" id="emoticons">
+            <div id="recebEmo" class="p-4 justify-content-center align-items-center text-align-center px-3"></div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <i id="resultadolink" class="far fa-copy fa-2x d-none vermais py-1"></i>
+        </div>
+        <div class="bg-white w-100 d-flex d-flex justify-content-center align-items-center text-align-center">
+            <textarea readonly rows="2" cols="140" id="linkfinal" placeholder="Click em Criar" class="lead text-align-center p-1 flex-wrap-wrap codigozap">
+            </textarea>
+        </div>
+        <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
+            <input type="button" id="copiar" value="Copiar" class="btn mr-2 bg-info d-none"> <input type="button" id="copyIdShort" value="Encurtar" class="btn ml-2 bg-warning d-none">
+        </div>
+        <!-- Receber QRCode -->
+        <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
+            <div id="receberQrCOde"></div>
+        </div>
+    </div>
+    <!-- Carregando -->
+
+    <div id="carregando" style="position: fixed; bottom: 10px; right: 10px;" class="spinner-border text-primary d-none">
+        <div class="sr-only">Carregando...</div>
+    </div>
+</body>
+
+</html>
