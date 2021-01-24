@@ -7,10 +7,16 @@ $(document).ready(function() {
         } else {
             var fullLink = linkCompletoTINYLINK.value;
             $.get(`https://tinyurl.com/api-create.php?url=${fullLink }`, function(fullLink) {
+                /* Limpando Div DO QrCOde */
+                $("#receberQrCodeTiny").text("")
                 var linkShortTINYLINK = fullLink;
                 linkCurtoTiny.value = linkShortTINYLINK;
                 AcessarLinkEncurtado.href = linkShortTINYLINK;
                 $("#divLinkCopiarTINYLINK").slideDown("slow")
+                    /* QR CODE Criador */
+                $("#receberQrCodeTiny").qrcode({
+                    text: linkShortTINYLINK
+                })
             })
         }
     })
