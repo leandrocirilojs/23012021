@@ -16,9 +16,15 @@ $(document).ready(function() {
                     $("#divErro").text(`Por favor, forneça um url válido.`).removeClass("d-none").slideDown("slow").delay("3000").slideUp("slow")
                     console.log("URL Inválida")
                 } else {
+                    /* Limpando Div DO QrCOde */
+                    $("#receberQrCodeIsGd").text("")
                     linkCurtoISGD.value = data.shorturl
                     $("#divLinkCopiarIsGd").slideDown("slow")
                     AcessarLinkEncurtadoISGD.href = data.shorturl
+                        /* QR CODE Criador */
+                    $("#receberQrCodeIsGd").qrcode({
+                        text: data.shorturl
+                    })
                 }
             })
         }
