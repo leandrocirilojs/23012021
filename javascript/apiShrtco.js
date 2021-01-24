@@ -7,11 +7,17 @@ $(function() {
             console.log("URL Inválida")
         } else {
             if (opcao1.checked) {
+
                 $.getJSON(`https://api.shrtco.de/v2/shorten?url=${fullLink}`, function(data) {
                     var linkShortShrtCode = data.result.short_link
-
                     linkCurtoShrtCode.value = linkShortShrtCode
                     AcessarLinkEncurtadoShrtCode.href = "https://" + linkShortShrtCode
+                        /* Limpando Div DO QrCOde */
+                    $("#receberQrCodeShrtCode").text("")
+                        /* QR CODE Criador */
+                    $("#receberQrCodeShrtCode").qrcode({
+                        text: `https://${linkShortShrtCode}`
+                    })
 
                     $("#divLinkCopiarShrtCode").slideDown("slow")
                         /* console.log(data.result.short_link2)
@@ -24,6 +30,12 @@ $(function() {
 
                     linkCurtoShrtCode.value = linkShortShrtCode
                     AcessarLinkEncurtadoShrtCode.href = "https://" + linkShortShrtCode
+                        /* Limpando Div DO QrCOde */
+                    $("#receberQrCodeShrtCode").text("")
+                        /* QR CODE Criador */
+                    $("#receberQrCodeShrtCode").qrcode({
+                        text: `https://${linkShortShrtCode}`
+                    })
 
                     $("#divLinkCopiarShrtCode").slideDown("slow")
                         /* 
@@ -38,6 +50,12 @@ $(function() {
 
                     linkCurtoShrtCode.value = linkShortShrtCode
                     AcessarLinkEncurtadoShrtCode.href = "https://" + linkShortShrtCode
+                        /* Limpando Div DO QrCOde */
+                    $("#receberQrCodeShrtCode").text("")
+                        /* QR CODE Criador */
+                    $("#receberQrCodeShrtCode").qrcode({
+                        text: `https://${linkShortShrtCode}`
+                    })
 
                     $("#divLinkCopiarShrtCode").slideDown("slow")
                         /* 
