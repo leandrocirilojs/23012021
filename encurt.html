@@ -17,6 +17,8 @@
     <script src="javascript/apiShrtco.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     <script src="javascript/loading.js"></script>
+    <!-- QRCODE Script -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/qrcode.js"></script>
     <title>Whats Chat</title>
     <style>
         .menulink1::after {
@@ -78,6 +80,11 @@
                             <spand class="d-none d-sm-inline">Copiar</span>
                         </div>
                     </div>
+                    <!-- Qr Code in Tiny -->
+                    <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
+                        <div id="receberQrCodeTiny"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -108,6 +115,10 @@
                         <div class="btn btn-light btn-sm border" id="copiarTimiLinkISGD"> <i class="fas fa-copy"></i>
                             <spand class="d-none d-sm-inline">Copiar</span>
                         </div>
+                    </div>
+                    <!-- Qr Code in Is Gd -->
+                    <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
+                        <div id="receberQrCodeIsGd"></div>
                     </div>
                 </div>
             </div>
@@ -141,6 +152,10 @@
                         <div class="btn btn-light btn-sm border" id="copiarTimiLinkShrtCode"> <i class="fas fa-copy"></i>
                             <spand class="d-none d-sm-inline">Copiar</span>
                         </div>
+                    </div>
+                    <!-- Qr Code in Is ShrtCode-->
+                    <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
+                        <div id="receberQrCodeShrtCode"></div>
                     </div>
                 </div>
             </div>
