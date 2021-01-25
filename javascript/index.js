@@ -4,7 +4,7 @@ function getLinkWA() {
     var numero = document.querySelector("#number").value;
     /* Verificando se número e menor que 9 */
     if (numero.length < 9) {
-        console.log(navigator.vibrate([100]))
+        navigator.vibrate([100])
             /* Se for menor que 9 faça isso */
         numberErro.classList.add("text-danger");
     } else {
