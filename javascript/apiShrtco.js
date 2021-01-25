@@ -4,7 +4,7 @@ $(function() {
         if (fullLink === "" || linkCompleto3.value.length < 8) {
             /* Tratamento de Erro */
             $("#divErro").text(`Por favor, forneça um url válido.`).removeClass("d-none").slideDown("slow").delay("3000").slideUp("3000")
-            console.log("URL Inválida")
+            console.log("Por favor, forneça um url válido.")
         } else {
             if (opcao1.checked) {
 
