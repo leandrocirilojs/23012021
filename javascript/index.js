@@ -3,10 +3,11 @@ function getLinkWA() {
     /* Campo Numero */
     var numero = document.querySelector("#number").value;
     /* Verificando se número e menor que 9 */
-    if (numero.length < 9)
-    /* Se for menor que 9 faça isso */
+    if (numero.length < 9) {
+        navigator.vibrate()
+            /* Se for menor que 9 faça isso */
         numberErro.classList.add("text-danger");
-    else {
+    } else {
         /* Se for maior que 9 faça isso */
         $("#receberQrCOde").empty("")
         numberErro.classList.remove("text-danger"),
